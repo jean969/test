@@ -1,0 +1,287 @@
+
+/* ====== Styles Généraux ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ====== Header avec effet Parallax ====== */
+header {
+    background: url('images/about-bg.jpg') no-repeat center/cover;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ff8000;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+header span {
+    color: #008000; /* Vert */
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: white;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Effet de scroll */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Présentation ====== */
+.presentation .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 50px;
+}
+
+.presentation img {
+    width: 45%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.presentation img:hover {
+    transform: scale(1.05);
+}
+
+.presentation .text {
+    width: 50%;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.presentation h2 {
+    font-size: 2.5rem;
+    color: #ff8000;
+    margin-bottom: 15px;
+}
+
+.presentation p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Animation d’apparition */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* ====== Mission, Vision, Valeurs (MVV) ====== */
+.mvv {
+    background: linear-gradient(to right, #ff8000, #008000);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.mvv h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.mvv .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.mvv .box {
+    width: 30%;
+    padding: 30px;
+    background: white;
+    color: black;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvv .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mvv .box i {
+    font-size: 45px;
+    color: #ff8000;
+    margin-bottom: 10px;
+}
+
+.mvv .box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff8000;
+}
+
+.mvv .box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ====== Équipe ====== */
+.team {
+    text-align: center;
+    padding: 70px 20px;
+    background: #fff;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    color: #ff8000;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.team .container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.member {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.member img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #008000;
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    font-size: 1.4rem;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* ====== Footer ====== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #008000;
+    color: white;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ff8000;
+    transform: translateY(-3px);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 1024px) {
+    .presentation .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentation img {
+        width: 80%;
+    }
+
+    .presentation .text {
+        width: 100%;
+    }
+
+    .mvv .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mvv .box {
+        width: 80%;
+    }
+
+    .team .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .mvv h2, .team h2 {
+        font-size: 2rem;
+    }
+
+    .mvv .box {
+        width: 100%;
+    }
+
+    .member {
+        width: 100%;
+    }
+}
